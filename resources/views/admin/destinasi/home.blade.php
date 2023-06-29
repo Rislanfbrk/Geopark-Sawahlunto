@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('assets/css/wisata.min.css') }}" rel="stylesheet">
@@ -65,9 +63,9 @@
                     <span>Destinasi</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('event') }}">
+                <a class="nav-link" href="{{ route('berita') }}">
                     <i class="fas fa-fw fa-bullhorn fa-3x"></i>
-                    <span>Event</span></a>
+                    <span>Berita</span></a>
             </li>
         </ul>
         <!-- End of Sidebar -->
@@ -94,15 +92,13 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600"> {{ Auth::user()->name }}
                                 </span>
                                 <img class="img-profile rounded-circle" src="{{ asset('assets/img/adminn.jpg') }}">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <!-- <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -133,8 +129,7 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="input-group-append">
-                                            <input type="search" name="search" class="form-control"
-                                                placeholder="Cari Nama Destinasi">
+                                            <input type="search" name="search" class="form-control" placeholder="Cari Nama Destinasi">
                                             <button type="submit" class="btn btn-default">
                                                 <i class="fas fa-search"></i>
                                             </button>
@@ -147,15 +142,15 @@
                                 </div>
                             </form>
                             @if (session('gagal'))
-                                <div class="alert alert-danger">
-                                    <b> Oops! </b> {{ session('error') }}
-                                </div>
+                            <div class="alert alert-danger">
+                                <b> Oops! </b> {{ session('error') }}
+                            </div>
                             @endif
 
                             @if (session('berhasil'))
-                                <div class="alert alert-success">
-                                    <b> Hooray! </b> {{ session('berhasil') }}
-                                </div>
+                            <div class="alert alert-success">
+                                <b> Hooray! </b> {{ session('berhasil') }}
+                            </div>
                             @endif
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -174,84 +169,66 @@
 
                                     <tbody>
                                         @foreach ($destinasi as $dest)
-                                            <tr>
-                                                {{-- <td>{{ $no++ }}</td> --}}
-                                                <td>{{ $dest->dest_name }}</td>
-                                                <td>{{ $dest->dest_category }}</td>
-                                                <td>{{ $dest->dest_location }}</td>
-                                                <td>{{ $dest->dest_desc }}</td>
-                                                <td>
-                                                    <img src="{{ asset('cover/' . $dest->dest_cover) }}"
-                                                        alt="image" height="40px" width="40px"
-                                                        style="border-radius: 100%">
-                                                </td>
-                                                <td>
-                                                    @foreach ($dest->photodests as $photo)
-                                                        <img class="mb-2"
-                                                            src="{{ asset('destinasi/' . $photo->destphoto) }}"
-                                                            alt="image" height="40px" width="40px"
-                                                            style="border-radius: 100%">
-                                                    @endforeach
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <a href="{{ route('editDestinasi', [$dest->id]) }}"
-                                                            class="btn btn-outline-success" role="button"><i
-                                                                class="fas fa-edit"></i></a>
-                                                    </div>
-                                                    <div class="mt-2">
-                                                        {{-- <form action=" {{ route('deleteDestinasi', [$dest->id]) }} ">
-                                                            <button class="btn btn-outline-danger"
-                                                                onclick="return confirm('Apakah anda yakin ingin menghapus?');"
-                                                                type="submit"><i class="fa fa-trash"
-                                                                    aria-hidden="true"></i></button>
-                                                            @csrf
-                                                            @method('delete')
-                                                        </form> --}}
+                                        <tr>
+                                            {{-- <td>{{ $no++ }}</td> --}}
+                                            <td>{{ $dest->dest_name }}</td>
+                                            <td>{{ $dest->dest_category }}</td>
+                                            <td>{{ $dest->dest_location }}</td>
+                                            <td>{{ $dest->dest_desc }}</td>
+                                            <td>
+                                                <img src="{{ asset('cover/' . $dest->dest_cover) }}" alt="image" height="40px" width="40px" style="border-radius: 100%">
+                                            </td>
+                                            <td>
+                                                @foreach ($dest->photodests as $photo)
+                                                <img class="mb-2" src="{{ asset('destinasi/' . $photo->destphoto) }}" alt="image" height="40px" width="40px" style="border-radius: 100%">
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <a href="{{ route('editDestinasi', [$dest->id]) }}" class="btn btn-outline-success" role="button"><i class="fas fa-edit"></i></a>
+                                                </div>
+                                                <div class="mt-2">
+                                                    {{-- <form action=" {{ route('deleteDestinasi', [$dest->id]) }} ">
+                                                    <button class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?');" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    @csrf
+                                                    @method('delete')
+                                                    </form> --}}
 
-                                                        <a class="btn btn-outline-danger" href="#"
-                                                            role="button" data-toggle="modal"
-                                                            data-target="#deleteModal">
-                                                            <i class="fa fa-trash"></i>
-                                                        </a>
-                                                    </div>
+                                                    <a class="btn btn-outline-danger" href="#" role="button" data-toggle="modal" data-target="#deleteModal">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
 
-                                                    {{-- Delete Modal --}}
-                                                    <div class="modal fade" id="deleteModal" tabindex="-1"
-                                                        role="dialog" aria-labelledby="deleteModalLabel"
-                                                        aria-hidden="true">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="deleteModalLabel">
-                                                                        Delete</h5>
-                                                                    <button class="close" type="button"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">×</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">Apakah anda yakin ingin Delete?
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button class="btn btn-secondary" type="button"
-                                                                        data-dismiss="modal">Cancel</button>
-                                                                    <form
-                                                                        action=" {{ route('deleteDestinasi', [$dest->id]) }} ">
-                                                                        <button class="btn btn-primary"
-                                                                            type="submit">Delete</button>
-                                                                        @csrf
-                                                                        @method('delete')
-                                                                    </form>
-                                                                </div>
+                                                {{-- Delete Modal --}}
+                                                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="deleteModalLabel">
+                                                                    Delete</h5>
+                                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">×</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Apakah anda yakin ingin Delete?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                                                <form action=" {{ route('deleteDestinasi', [$dest->id]) }} ">
+                                                                    <button class="btn btn-primary" type="submit">Delete</button>
+                                                                    @csrf
+                                                                    @method('delete')
+                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </td>
-                                            </tr>
+                                                </div>
+                                            </td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                                    {{ $destinasi->links('paginatecustom') }}
+                                {{ $destinasi->links('paginatecustom') }}
                             </div>
                         </div>
                     </div>
@@ -273,8 +250,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

@@ -12,14 +12,11 @@
     <title>Wisata Surabaya</title>
 
     {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href=" {{ asset('assets/css/styles.css') }} ">
@@ -96,15 +93,13 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600"> {{ Auth::user()->name }}
                                 </span>
                                 <img class="img-profile rounded-circle" src="{{ asset('assets/img/adminn.jpg') }}">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <!-- <div class="dropdown-divider"></div> -->
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -134,27 +129,22 @@
                                     <h6 class="font-weight-bold text-primary">Edit Destinasi</h6>
                                 </div>
                                 <div class="col-6 d-flex justify-content-end">
-                                    <a class="btn-close btn-outline-primary" aria-label="close"
-                                        href="{{ route('destinasi') }}" role="button"></a>
+                                    <a class="btn-close btn-outline-primary" aria-label="close" href="{{ route('destinasi') }}" role="button"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <form action="{{ route('updateDestinasi', [$destinasi->id]) }}" method="post"
-                                        enctype="multipart/form-data">
+                                    <form action="{{ route('updateDestinasi', [$destinasi->id]) }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group mb-3">
                                             <label for="title">Nama Destinasi</label>
-                                            <input type="text" name="dest_name"
-                                                value="{{ $destinasi->dest_name }}" id="title"
-                                                class="form-control">
+                                            <input type="text" name="dest_name" value="{{ $destinasi->dest_name }}" id="title" class="form-control">
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="title">Destinasi Kategori</label>
-                                            <select name="dest_category" class="form-select"
-                                                aria-label="Default select">
+                                            <select name="dest_category" class="form-select" aria-label="Default select">
                                                 <option selected>Pilih Kategori</option>
                                                 <option> Pusat Perbelanjaan</option>
                                                 <option> Monumen</option>
@@ -164,8 +154,7 @@
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="title">Lokasi Destinasi</label>
-                                            <input type="text" value="{{ $destinasi->dest_location }}"
-                                                name="dest_location" id="title" class="form-control">
+                                            <input type="text" value="{{ $destinasi->dest_location }}" name="dest_location" id="title" class="form-control">
                                         </div>
                                         <div class="mb-3">
                                             <label for="dest_desc" class="form-label">Deskripsi</label>
@@ -173,22 +162,15 @@
                                         </div>
                                         <div class="mb-3">
                                             <p for=""> Cover : </p>
-                                            <img src="{{ asset('/cover/' . $destinasi->dest_cover) }}"
-                                                class="img-responsive" style="max-height: 100px; max-width: 100px;"
-                                                alt="" srcset="">
-                                            <input type="file" id="input-file-now-custom-3"
-                                                class="form-control m-2" name="cover">
+                                            <img src="{{ asset('/cover/' . $destinasi->dest_cover) }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
+                                            <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="cover">
                                         </div>
                                         @if (count($destinasi->photodests) > 0)
-                                            <p>Images:</p>
-                                            @foreach ($destinasi->photodests as $img)
-                                                <img src="{{ asset('/destinasi/' . $img->destphoto) }}"
-                                                    class="img-responsive"
-                                                    style="max-height: 100px; max-width: 100px;" alt=""
-                                                    srcset="">
-                                                <input type="file" id="input-file-now-custom-3"
-                                                    class="form-control m-2" name="image_{{ $img->id }}">
-                                            @endforeach
+                                        <p>Images:</p>
+                                        @foreach ($destinasi->photodests as $img)
+                                        <img src="{{ asset('/destinasi/' . $img->destphoto) }}" class="img-responsive" style="max-height: 100px; max-width: 100px;" alt="" srcset="">
+                                        <input type="file" id="input-file-now-custom-3" class="form-control m-2" name="image_{{ $img->id }}">
+                                        @endforeach
                                         @endif
                                         <button type="submit" class="btn btn-danger mt-3 ">Submit</button>
                                     </form>
@@ -209,8 +191,7 @@
             </a>
 
             <!-- Logout Modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">

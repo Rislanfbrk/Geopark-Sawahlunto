@@ -9,7 +9,7 @@ class destination extends Model
 {
     use HasFactory;
 
-    
+
     protected $fillable = [
         'dest_name',
         'dest_category',
@@ -18,7 +18,8 @@ class destination extends Model
         'dest_cover'
     ];
 
-    public function photodests(){
+    public function photodests()
+    {
         return $this->hasMany(Photodest::class);
     }
 }

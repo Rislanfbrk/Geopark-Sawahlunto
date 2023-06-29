@@ -17,9 +17,9 @@ class contri
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->user()->role == User::ROLE_CONTRI){
+        if ($request->user()->role == User::ROLE_CONTRI) {
             return $next($request);
-        } else{
+        } else {
             abort(404);
         }
     }

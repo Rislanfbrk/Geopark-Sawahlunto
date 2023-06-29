@@ -119,9 +119,9 @@ class contriController extends Controller
     public function search(Request $request)
     {
         $destinasi =  destination::where('dest_name', 'LIKE', '%' . $request->search . '%')
-                ->orWhere('dest_category', 'LIKE', '%' . $request->search . '%')
-                ->orWhere('dest_location', 'LIKE', '%' . $request->search . '%')
-                ->paginate(2);
+            ->orWhere('dest_category', 'LIKE', '%' . $request->search . '%')
+            ->orWhere('dest_location', 'LIKE', '%' . $request->search . '%')
+            ->paginate(2);
         $destinasi->withPath('search');
         $destinasi->appends($request->all());
         return view('contri.destinasi.home', compact('destinasi'));

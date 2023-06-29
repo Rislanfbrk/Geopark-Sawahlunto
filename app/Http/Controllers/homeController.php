@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\destination;
-use App\Models\Event;
-use App\Models\eventbaru;
+use App\Models\Berita;
+use App\Models\beritabaru;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class homeController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         $home = Auth::user();
         return view('home', compact('home'));
     }
@@ -21,57 +22,64 @@ class homeController extends Controller
     //     return view('destinasi', compact('destinasi'));
     // }
 
-    public function admin(){
+    public function admin()
+    {
         return view('admin.home');
     }
-    public function contri(){
+    public function contri()
+    {
         return view('contri.home');
     }
 
-    public function destinasi(){
+    public function destinasi()
+    {
         $destinasi = destination::paginate(6);
-        return view('destinasi',compact('destinasi'));
+        return view('destinasi', compact('destinasi'));
     }
 
-    public function event(){
-        $event = Event::paginate(6);
-        return view('event', compact('event'));
+    public function berita()
+    {
+        $berita = Berita::paginate(6);
+        return view('berita', compact('berita'));
     }
 
-    public function detail($id){
+    public function detail($id)
+    {
         $destinasi = destination::findOrFail($id);
         return view('detaildestinasi', compact('destinasi'));
     }
 
-    public function detailEvent($id){
-        $event = event::findOrFail($id);
-        return view('detailevent', compact('event'));
+    public function detailBerita($id)
+    {
+        $berita = berita::findOrFail($id);
+        return view('detailberita', compact('berita'));
     }
 
-    public function filter(Request $request){
+    public function filter(Request $request)
+    {
         $destinasi = destination::where('dest_category', 'LIKE', '%' . $request->selectcategory . '%')
             ->paginate(6);
         $destinasi->withPath('filter');
         $destinasi->appends($request->all());
-        return view('destinasi',compact('destinasi'));
+        return view('destinasi', compact('destinasi'));
     }
 
-    public function filterEvent(Request $request){
+    public function filterBerita(Request $request)
+    {
 
-        $event =  event::where('event_name', 'LIKE', '%' . $request->search . '%')
-            ->orWhere('event_desc', 'LIKE', '%' . $request->search . '%')
-            ->orWhere('event_location', 'LIKE', '%' . $request->search . '%')
-            ->orWhere('event_cover', 'LIKE', '%' . $request->search . '%')
-            ->orWhere('tanggal_mulai', 'LIKE', '%' . $request->search . '%')
-            ->orWhere('tanggal_akhir', 'LIKE', '%' . $request->search . '%')
+        $berita =  berita::where('berita_name', 'LIKE', '%' . $request->search . '%')
+            ->orWhere('berita_desc', 'LIKE', '%' . $request->search . '%')
+            ->orWhere('berita_location', 'LIKE', '%' . $request->search . '%')
+            ->orWhere('berita_cover', 'LIKE', '%' . $request->search . '%')
             ->paginate(6);
-        
-        $event->withPath('filter');
-        $event->appends($request->all());
-        return view('event', compact('event'));
+
+        $berita->withPath('filter');
+        $berita->appends($request->all());
+        return view('berita', compact('berita'));
     }
 
-    public function team(){
+    public function team()
+    {
         return view('card');
     }
 }

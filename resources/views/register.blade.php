@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
     {{-- Bootstrap CDN --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,6 +27,7 @@
             hsl(218, 41%, 19%) 80%,
             transparent 100%); */
         }
+
         #radius-shape-1 {
             height: 220px;
             width: 220px;
@@ -36,6 +36,7 @@
             background: radial-gradient(#44006b, #ad1fff);
             overflow: hidden;
         }
+
         #radius-shape-2 {
             border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
             bottom: -60px;
@@ -45,10 +46,12 @@
             background: radial-gradient(#44006b, #ad1fff);
             overflow: hidden;
         }
+
         .bg-glass {
             background-color: hsla(0, 0%, 100%, 0.9) !important;
             backdrop-filter: saturate(200%) blur(25px);
         }
+
         .my-5 {
             margin-top: 1rem !important;
             margin-bottom: 10rem !important;
@@ -74,8 +77,7 @@
                             @csrf
                             <div class="row mb-2">
                                 <div class="col-12">
-                                    <input type="text" name="name" class="form-control"
-                                        placeholder="Masukkan Nama" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama" required>
                                     <label for="name" class="mb-2"> Nama </label>
                                 </div>
                             </div>
@@ -83,35 +85,30 @@
                             <!-- Email input -->
                             <div class="form-outline mb-2">
                                 {{-- <input type="email" id="form3Example3" class="form-control" /> --}}
-                                <input type="text" name="email" class="form-control"
-                                    placeholder="Masukkan Alamat Email" required>
+                                <input type="text" name="email" class="form-control" placeholder="Masukkan Alamat Email" required>
                                 <label class="form-label" for="form3Example3">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-2">
                                 {{-- <input type="password" id="form3Example4" class="form-control" /> --}}
-                                <input type="password" name="password" class="form-control"
-                                    placeholder="Masukkan Password" required>
+                                <input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
                                 <label class="form-label" for="form3Example4">Password</label>
                             </div>
 
                             <!-- Role -->
                             <div class="mb-3">
-                                <div class="btn-group-vertical" role="group"
-                                    aria-label="Vertical radio toggle button group">
-                                    <input type="radio" class="btn-check" name="role" value="administrator"
-                                        id="vbtn-radio1" autocomplete="off" checked>
+                                <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                                    <input type="radio" class="btn-check" name="role" value="administrator" id="vbtn-radio1" autocomplete="off" checked>
                                     <label class="btn btn-outline-primary" for="vbtn-radio1">Admin</label>
-                                    <input type="radio" class="btn-check" name="role" value="contributor"
-                                        id="vbtn-radio2" autocomplete="off">
+                                    <input type="radio" class="btn-check" name="role" value="contributor" id="vbtn-radio2" autocomplete="off">
                                     <label class="btn btn-outline-primary" for="vbtn-radio2">Contributor</label>
                                 </div>
                             </div>
 
                             <!-- Register -->
                             <div class="row mb-3">
-                                    <button type="submit" class="btn btn-primary" > Register</button>
+                                <button type="submit" class="btn btn-primary"> Register</button>
                             </div>
                         </form>
                         <p style="font-weight: 500"> Sudah Punya Akun? <a href="{{ route('login') }}"> LOGIN </a></p>
@@ -167,8 +164,7 @@
         <p style="font-weight: 500"> Sudah Punya Akun? <a href="{{ route('login') }}"> LOGIN </a></p>
     </div> --}}
     {{-- Bootstrap CDN --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
 </body>
 

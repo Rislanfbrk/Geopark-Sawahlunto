@@ -13,9 +13,8 @@ class Photodest extends Model
         'destination_id',
         'destphoto',
     ];
-    public function destinations(){
+    public function destinations()
+    {
         return $this->belongsTo(destination::class);
     }
-
-
 }
