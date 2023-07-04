@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>HALAMAN POST</title>
+    <title>Geopark Sawahlunto</title>
+    <link rel="shortcut icon" href="assets/img/header/logosawahlunto.png" />
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
@@ -16,7 +17,7 @@
         <nav class="navbar navbar-expand-lg box-navbar" data-bs-theme="white">
             <div class="container p-2">
                 <a class="navbar-brand ms-3" href="#">
-                    <img src="{{ asset('assets/img/header/surabaya.png') }}" alt="Bootstrap" width="105px">
+                    <img src="{{ asset('assets/img/header/logosawahlunto.png') }}" alt="Bootstrap" width="65px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,15 +27,15 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                    font-weight: 500;" href="{{ route('admin') }}">Beranda</a>
+                                    font-weight: 500; color: #198754 !important;" href="{{ route('admin') }}">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                    font-weight: 500;" href="{{ route('destinasi') }}">Destinasi</a>
+                                    font-weight: 500; color: #198754 !important;" href="{{ route('destinasi') }}">Destinasi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                    font-weight: 500;" href="{{ route('logout') }}">Logout</a>
+                                    font-weight: 500; color: #198754 !important;" href="{{ route('logout') }}">Logout</a>
                         </li>
                     </ul>
                 </div>

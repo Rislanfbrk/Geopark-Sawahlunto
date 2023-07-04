@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Wisata Surabaya</title>
+    <title>{{ Auth::user()->name }} - Admin Geopark Sawahlunto</title>
+    <link rel="shortcut icon" href="assets/img/header/logosawahlunto.png" />
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -35,7 +36,7 @@
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
                     <img src="{{ asset('assets/img/header/logos.png') }}" alt="Logo" width="50px" height="50px">
                 </div>
-                <div class="sidebar-brand-text mx-3">Wisata Surabaya</div>
+                <div class="sidebar-brand-text mx-3">Geopark Sawahlunto</div>
             </a>
 
             <!-- Divider -->

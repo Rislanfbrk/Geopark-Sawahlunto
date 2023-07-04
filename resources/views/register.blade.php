@@ -61,7 +61,7 @@
         <div class="row gx-lg-5 align-items-center mb-5">
             <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
                 <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-                    WISTA SURABAYA <br />
+                    GEOPARK SAWAHLUNTO <br />
                     <span style="color: hsl(218, 81%, 75%)">Register</span>
                     <img src="{{ asset('assets/img/LoginBg.png') }}" width="80%">
                 </h1>
@@ -77,23 +77,23 @@
                             @csrf
                             <div class="row mb-2">
                                 <div class="col-12">
-                                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama" required>
                                     <label for="name" class="mb-2"> Nama </label>
+                                    <input type="text" name="name" class="form-control" placeholder="Masukkan Nama" required>
                                 </div>
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-2">
+                                <label class="form-label" for="form3Example3">Email address</label>
                                 {{-- <input type="email" id="form3Example3" class="form-control" /> --}}
                                 <input type="text" name="email" class="form-control" placeholder="Masukkan Alamat Email" required>
-                                <label class="form-label" for="form3Example3">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-2">
+                                <label class="form-label" for="form3Example4">Password</label>
                                 {{-- <input type="password" id="form3Example4" class="form-control" /> --}}
                                 <input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
-                                <label class="form-label" for="form3Example4">Password</label>
                             </div>
 
                             <!-- Role -->

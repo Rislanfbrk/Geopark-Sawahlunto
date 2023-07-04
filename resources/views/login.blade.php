@@ -64,7 +64,7 @@
             <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
                 <a href="{{ route('home') }}" style="text-decoration:none">
                     <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
-                        WISATA SURABAYA <br />
+                        GEOPARK SAWAHLUNTO <br />
                         <span style="color: hsl(218, 81%, 75%)">Login</span>
                         <img src="{{ asset('assets/img/LoginBg.png') }}" width="80%">
                     </h1>
@@ -95,14 +95,14 @@
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form3Example3" class="form-control" placeholder="Masukkan Email" name="email" required />
                                 <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" id="form3Example3" class="form-control" placeholder="Masukkan Email" name="email" required />
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="form3Example4" class="form-control" placeholder="Masukkan Password" name="password" required />
                                 <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" id="form3Example4" class="form-control" placeholder="Masukkan Password" name="password" required />
                             </div>
 
                             <!-- Submit button -->

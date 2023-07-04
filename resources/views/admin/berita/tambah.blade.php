@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Wisata Surabaya</title>
+    <title>Geopark Sawahlunto</title>
+    <link rel="shortcut icon" href="assets/img/header/logosawahlunto.png" />
 
     {{-- Bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -36,9 +37,9 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('berita') }}">
                 <div class="sidebar-brand-icon">
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
-                    <img src="{{ asset('assets/img/header/logos.png') }}" alt="Logo" width="50px" height="50px">
+                    <img src="{{ asset('assets/img/header/logosawahlunto.png') }}" alt="Logo" width="50px" height="50px">
                 </div>
-                <div class="sidebar-brand-text mx-3">Wisata Surabaya</div>
+                <div class="sidebar-brand-text mx-3">Geopark Sawahlunto</div>
             </a>
 
             <!-- Divider -->

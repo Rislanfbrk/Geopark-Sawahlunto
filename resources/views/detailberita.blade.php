@@ -6,8 +6,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisata Surabaya</title>
-    <link rel="shortcut icon" href="assets/img/header/logos.png" />
+    <title>Geopark Sawahlunto</title>
+    <link rel="shortcut icon" href="assets/img/header/logosawahlunto.png" />
 
     <!-- CDN Vue JS -->
     {{-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script> --}}
@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-lg box-navbar" data-bs-theme="white">
             <div class="container p-2">
                 <a class="navbar-brand ms-3" href="#">
-                    <img src="{{ asset('assets/img/header/surabaya.png') }}" alt="Bootstrap" width="105px">
+                    <img src="{{ asset('assets/img/header/logosawahlunto.png') }}" alt="Bootstrap" width="65px">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -38,23 +38,23 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                        font-weight: 500;" href="{{ route('home') }}">Beranda</a>
+                                        font-weight: 500; color: #198754 !important;" href="{{ route('home') }}">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                        font-weight: 500;" href="{{ route('publicDestinasi') }}">Destinasi</a>
+                                        font-weight: 500; color: #198754 !important;" href="{{ route('publicDestinasi') }}">Destinasi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                        font-weight: 500;" href="{{ route('publicBerita') }}"> Berita </a>
+                                        font-weight: 500; color: #198754 !important;" href="{{ route('publicBerita') }}"> Berita </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                    font-weight: 500;" href="{{ route('team') }}"> Team </a>
+                                    font-weight: 500; color: #198754 !important;" href="{{ route('team') }}"> Team </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="font-size: 20px;
-                                        font-weight: 500;" href="{{ route('login') }}">Login</a>
+                                        font-weight: 500; color: #198754 !important;" href="{{ route('login') }}">Login</a>
                         </li>
                     </ul>
                 </div>

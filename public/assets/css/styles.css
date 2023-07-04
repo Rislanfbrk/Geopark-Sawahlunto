@@ -52,7 +52,7 @@ body {
 }
 
 .badge-primary {
-    background-color: #6666ca;
+    background-color: #198754;
 }
 
 .accordion {
@@ -95,6 +95,10 @@ body {
     border-color: #6868ac;
 }
 
+.text-success{
+    color:#198754 !important
+}
+
 /* Footer */
 .footer-link a,
 p,
@@ -122,9 +126,18 @@ span {
     border-radius: 6px;
 }
 
+.hubungi-kami:hover {
+    transform: scale(1.1);
+}
+
 .telpon-icon {
     color: #040468;
     --bs-btn-hover-color: #040468;
+}
+
+.fb:hover,
+.ig:hover  {
+    transform: scale(1.1);
 }
 
 .facebook-icon {
